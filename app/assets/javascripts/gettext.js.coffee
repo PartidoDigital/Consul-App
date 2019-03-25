@@ -6,7 +6,7 @@ i18n = {
     "Save": "Guardar",
     "Edit": "Editar",
     "Delete": "Borrar",
-    "Unregistered": "<p>Necesitas <a href='/users/sign_in'>iniciar sesión</a> o <a href='/users/sign_up'>registrarte</a> para continuar.</p>"
+    "Unregistered": "<p>Necesitas <a href='/auth/auth0'>iniciar sesión o registrarte</a> para continuar.</p>"
   },
   en: {
     "Comments": "Coments",
@@ -15,7 +15,7 @@ i18n = {
     "Save": "Save",
     "Edit": "Edit",
     "Delete": "Delete",
-    "Unregistered": "You need to <a href='/users/sign_in'>sign in</a> or <a href='/users/sign_up'>sign up</a> to continue."
+    "Unregistered": "You need to <a href='/auth/auth0'>sign in or sign up</a> to continue."
   }
 }
 

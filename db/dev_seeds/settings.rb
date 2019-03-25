@@ -36,9 +36,7 @@ section "Creating Settings" do
   Setting.create(key: "feature.spending_proposals", value: nil)
   Setting.create(key: "feature.spending_proposal_features.voting_allowed", value: nil)
 
-  Setting.create(key: "feature.twitter_login", value: "true")
-  Setting.create(key: "feature.facebook_login", value: "true")
-  Setting.create(key: "feature.google_login", value: "true")
+  Setting.create(key: 'feature.auth0_login', value: "true")
   Setting.create(key: "feature.signature_sheets", value: "true")
   Setting.create(key: "feature.user.recommendations", value: "true")
   Setting.create(key: "feature.user.recommendations_on_debates", value: "true")

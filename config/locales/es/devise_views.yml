@@ -33,9 +33,8 @@ es:
         unlock_link: Desbloquear mi cuenta
     menu:
       login_items:
-        login: Entrar
+        login: Entrar o Registrarse
         logout: Salir
-        signup: Registrarse
     organizations:
       registrations:
         new:

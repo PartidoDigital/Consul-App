@@ -299,6 +299,8 @@ GEM
     omniauth (1.8.1)
       hashie (>= 3.4.6, < 3.6.0)
       rack (>= 1.6.2, < 3)
+    omniauth-auth0 (2.0.0)
+      omniauth-oauth2 (~> 1.4)
     omniauth-facebook (4.0.0)
       omniauth-oauth2 (~> 1.2)
     omniauth-google-oauth2 (0.4.1)
@@ -560,6 +562,7 @@ DEPENDENCIES
   mdl (~> 0.5.0)
   newrelic_rpm (~> 4.1.0.333)
   omniauth (~> 1.8.1)
+  omniauth-auth0 (~> 2.0.0)
   omniauth-facebook (~> 4.0.0)
   omniauth-google-oauth2 (~> 0.4.0)
   omniauth-twitter (~> 1.4.0)
@@ -597,4 +600,4 @@ DEPENDENCIES
   whenever (~> 0.10.0)
 
 BUNDLED WITH
-   1.17.1
+   1.17.3
