@@ -270,8 +270,8 @@ es:
     start_proposal: Crea una propuesta
   omniauth:
       finish_signup:
-      title: "Detalles adicionales de tu cuenta"
-      username_warning: "Debido a que hemos cambiado la forma en la que nos conectamos con redes sociales y es posible que tu nombre de usuario aparezca como 'ya en uso', incluso si antes podías acceder con él. Si es tu caso, por favor elige un nombre de usuario distinto."
+        title: "Detalles adicionales de tu cuenta"
+        username_warning: "Debido a que hemos cambiado la forma en la que nos conectamos con redes sociales y es posible que tu nombre de usuario aparezca como 'ya en uso', incluso si antes podías acceder con él. Si es tu caso, por favor elige un nombre de usuario distinto."
     info_sign_in: "Entra con:"
     info_sign_up: "Regístrate con:"
     or_fill: "O rellena el siguiente formulario:"
