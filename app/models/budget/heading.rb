@@ -26,8 +26,6 @@ class Budget
     has_many :investments
     has_many :content_blocks
 
-    before_validation :assign_model_to_translations
-
     validates_translation :name, presence: true
     validates :group_id, presence: true
     validates :price, presence: true
@@ -40,8 +38,7 @@ class Budget
 
     delegate :budget, :budget_id, to: :group, allow_nil: true
 
-    scope :i18n,                  -> { joins(:translations) }
-    scope :allow_custom_content,  -> { i18n.where(allow_custom_content: true).order("budget_heading_translations.name") }
+    scope :allow_custom_content,  -> { where(allow_custom_content: true).sort_by(&:name) }
 
     def self.sort_by_name
       all.sort do |heading, other_heading|
@@ -63,5 +60,19 @@ class Budget
       slug.nil? || budget.drafting?
     end
 
+    class Translation < Globalize::ActiveRecord::Translation
+      delegate :budget, to: :globalized_model
+
+      validate :name_uniqueness_by_budget
+
+      def name_uniqueness_by_budget
+        if budget.headings
+                 .joins(:translations)
+                 .where(name: name)
+                 .where.not("budget_heading_translations.budget_heading_id": budget_heading_id).any?
+          errors.add(:name, I18n.t("errors.messages.taken"))
+        end
+      end
+    end
   end
 end
