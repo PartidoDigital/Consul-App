@@ -79,6 +79,7 @@ class Setting < ApplicationRecord
     def defaults
       {
         "feature.featured_proposals": nil,
+        "feature.auth0_login": true,
         "feature.facebook_login": true,
         "feature.google_login": true,
         "feature.twitter_login": true,
